@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image and Video Grid</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            text-align: center;
+        }
+        img, video {
+            max-width: 100%;
+        }
+        .button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="" class="logo"><img src="Vivamax.jpg" width="300" height="70"></a>
+        <nav>
+            <ul>
+                <li><a href="Event.html">10 EVENTS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Image 1 -->
+        <div class="image">
+            <img id="image1" src="Pic1.jpeg" alt="Image 1">
+            <button class="button" onclick="changeImage('image1', 'Pic4.jpg')">Change Image</button>
+        </div>
+        
+        <!-- Image 2 -->
+        <div class="image">
+            <img id="image2" src="Pic2.jpg" alt="Image 2">
+            <button class="button" onclick="changeImage('image2', 'Pic5.jpg')">Change Image</button>
+        </div>
+        
+        <!-- Image 3 -->
+        <div class="image">
+            <img id="image3" src="Pic3.jpg" alt="Image 3">
+            <button class="button" onclick="changeImage('image3', 'Pic6.jpg')">Change Image</button>
+        </div>
+        
+        <!-- Video 1 -->
+        <div class="video">
+            <video id="video1" controls>
+                <source src="Vid1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button class="button" onclick="changeVideo('video1', 'Vid2.mp4')">Change Video</button>
+        </div>
+        
+        <!-- Video 2 -->
+        <div class="video">
+            <video id="video2" controls>
+                <source src="Vid3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button class="button" onclick="changeVideo('video2', 'Vid4.mp4')">Change Video</button>
+        </div>
+        
+        <!-- Video 3 -->
+        <div class="video">
+            <video id="video3" controls>
+                <source src="Vid5.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <button class="button" onclick="changeVideo('video3', 'Vid6.mp4')">Change Video</button>
+        </div>
+    </div>
+
+    <script>
+        function changeImage(imageId, newSrc) {
+            document.getElementById(imageId).src = newSrc;
+        }
+
+        function changeVideo(videoId, newSrc) {
+            var video = document.getElementById(videoId);
+            video.src = newSrc;
+            video.load();
+            video.play();
+        }
+    </script>
+</body>
+</html>
