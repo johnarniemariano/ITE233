@@ -1,0 +1,83 @@
+/* Reset some default styles for consistency */
+body, h1, h2, p, button {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf5e6 ;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #918151;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+p {
+
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #004242;
+    color: #fff;
+    padding: 10px 800px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#originalArray, #pushedArray, #poppedArray, #mappedArray {
+    font-weight: bold;
+    color: #007BFF;
+}
+
+#originalArray::before, #pushedArray::before, #poppedArray::before, #mappedArray::before {
+    content: "Array: ";
+}
+/* Styling for the push() method */
+#pushedArray {
+    color: #28a745; /* Green color for push() result */
+}
+
+/* Styling for the pop() method */
+#poppedArray {
+    color: #dc3545; /* Red color for pop() result */
+}
+
+/* Styling for the map() method */
+#mappedArray {
+    color: #ffc107; /* Yellow color for map() result */
+}
+
+/* Highlight button for active method */
+button.active {
+    background-color: #333;
+    color: #fff;
+}
+

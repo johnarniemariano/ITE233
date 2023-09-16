@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 Array Method</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+    <h1> 3 Array Methods </h1>
+     <a href="https://github.com/johnarniemariano/ITE233" class="logo"><img src="Github.jpg" width="150" height="100"></a>
+
+    <h2>push() Method</h2>
+    <p>Click the button to add an element:</p>
+    <button onclick="pushToArray()">Push Element</button>
+    <p>Array: <span id="pushedArray"></span></p>
+
+    <h2>pop() Method</h2>
+    <p>Click the button to remove the last element:</p>
+    <button onclick="popFromArray()">Pop Element</button>
+    <p>Array: <span id="poppedArray"></span></p>
+
+    <h2>map() Method</h2>
+    <p>Click the button to apply the map function to double the values:</p>
+    <button onclick="mapArray()">Map Array</button>
+    <p>Original Array: <span id="originalArray"></span></p>
+    <p>Modified Array: <span id="mappedArray"></span></p>
+
+    <script>
+        // Initial array for demonstration
+        let myArray = [1, 2, 3, 4, 5];
+
+        // Function to display arrays
+        function displayArray(elementId, array) {
+            document.getElementById(elementId).textContent = JSON.stringify(array);
+        }
+
+        // push() method example
+        function pushToArray() {
+            myArray.push(6);
+            displayArray('pushedArray', myArray);
+        }
+
+        // pop() method example
+        function popFromArray() {
+            myArray.pop();
+            displayArray('poppedArray', myArray);
+        }
+
+        // map() method example
+        function mapArray() {
+            const mappedArray = myArray.map(function (value) {
+                return value * 2;
+            });
+            displayArray('mappedArray', mappedArray);
+            displayArray('originalArray', myArray);
+        }
+
+        // Initial display of arrays
+        displayArray('pushedArray', myArray);
+        displayArray('poppedArray', myArray);
+        displayArray('originalArray', myArray);
+    </script>
+</body>
+</html>
+
