@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Parts</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+    <h1>Computer Parts</h1>
+    <a href="https://github.com/johnarniemariano/ITE233" class="logo"><img src="Github.jpg" width="150" height="100"></a>
+    
+    <p id="parts-list"></p>
+    
+    
+    <button onclick="joinParts()">Join Parts</button>
+    <button onclick="deletePart()">Delete Part</button>
+    <button onclick="concatParts()">Concat Parts</button>
+
+    <script>
+        // Array of computer parts
+        const computerParts = [
+            "CPU",
+            "GPU",
+            "RAM",
+            "Motherboard",
+            "Storage",
+            "Power Supply",
+            "Monitor",
+            "Keyboard",
+            "Mouse",
+            "Case"
+        ];
+
+       
+
+        function joinParts() {
+            const partsList = document.getElementById("parts-list");
+            const joinedParts = computerParts.join(' - ');
+            partsList.textContent = "Joined Parts: " + joinedParts;
+        }
+
+        function deletePart() {
+            const partsList = document.getElementById("parts-list");
+            const indexToDelete = parseInt(prompt("Enter the index of the part to delete (0-9):"));
+            if (!isNaN(indexToDelete) && indexToDelete >= 0 && indexToDelete < computerParts.length) {
+                computerParts.splice(indexToDelete, 1);
+                partsList.textContent = "Part deleted. Remaining parts: " + computerParts.join(', ');
+            } else {
+                alert("Invalid index. Please enter a valid index between 0 and 9.");
+            }
+        }
+
+        function concatParts() {
+            const additionalParts = ["SSD", "Graphics Card", "Cooling Fan"];
+            const concatenatedParts = computerParts.concat(additionalParts);
+            const partsList = document.getElementById("parts-list");
+            partsList.textContent = "Concatenated Parts: " + concatenatedParts.join(', ');
+        }
+    </script>
+</body>
+</html>

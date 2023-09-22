@@ -1,0 +1,41 @@
+/* Reset some default styles for better consistency */
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf5e6;
+    text-align: center;
+}
+
+/* Style for the heading */
+h1 {
+    background-color: #000000;
+    color: white;
+    padding: 20px;
+}
+
+/* Style for the paragraph */
+p#parts-list {
+    font-size: 18px;
+    margin: 20px;
+}
+
+/* Style for the buttons */
+button {
+    background-color: #123524;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style for button hover effect */
+button:hover {
+    background-color: #0056b3;
+}
