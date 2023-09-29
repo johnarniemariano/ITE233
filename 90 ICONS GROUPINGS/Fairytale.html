@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>30 FONT AWESOME ICONS</title>
+   <!-- swiper css link  -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+   <style>
+      /* Define styles for dark mode */
+      .dark-mode {
+         background-color: #222;
+         color: #fff;
+      }
+      /* Add more dark mode styles as needed */
+   </style>
+</head>
+
+
+   <!-- Dark mode toggle button -->
+<button id="dark-mode-toggle" class="fas fa-moon" style="font-size: 15px;"></button>
+
+   <script>
+      // Function to toggle dark mode
+      function toggleDarkMode() {
+         const currentMode = document.body.classList.contains('dark-mode');
+         const newMode = !currentMode;
+         document.body.classList.toggle('dark-mode', newMode);
+
+          const partnersHeading = document.getElementById('partners-heading');
+    partnersHeading.style.color = newMode ? 'white' : 'black';
+
+         // Send the dark mode preference as a query parameter to toggle in URL
+         const newUrl = window.location.href.replace(
+            /(\?|&)darkmode=(true|false)/,
+            `?darkmode=${newMode}`
+         );
+         window.history.replaceState({}, '', newUrl);
+
+         // Store the preference in a cookie
+         document.cookie = `darkMode=${newMode}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
+      }
+
+      // Event listener for the dark mode toggle button
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      darkModeToggle.addEventListener('click', toggleDarkMode);
+
+      // Check the user's dark mode preference from local storage
+      const userPreference = localStorage.getItem('darkMode');
+      if (userPreference === 'true') {
+         toggleDarkMode();
+      }
+  function updatePST() {
+    const pstElement = document.getElementById('pstTime');
+    const now = new Date().toLocaleString('en-US', { timeZone: 'Asia/Manila', hour12: true, hour: 'numeric', minute: 'numeric' });
+    pstElement.textContent = `Philippine Time: ${now}`;
+}
+
+setInterval(updatePST, 1000);
+</script>
+   <button type="button" class="scroll-top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+<!-- header section starts  -->
+
+<section class="header">
+   <a href="#" class="logo"><img src="images/Logo/Fairytale1.jpg" width="220" height="130"></a>
+    <nav class="navbar">
+      <a href="Onepiece.html">Onepiece</a>
+      <a href="HunterXHunter.html">HunterXHunter</a>
+      <a href="Fairytale.html">Fairytale</a>
+     
+   </nav>
+  <div class="time-display">
+        <span class="philippine-time" id="pstTime">Loading...</span>
+    </div>
+
+   <div id="menu-btn" class="fas fa-bars"></div>
+
+</section>
+
+<!-- header section ends -->
+
+<section class="home">
+   <div class="swiper home-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide" style="background:url(images/Slide/Fairytale1.jpg) no-repeat">
+         </div>
+         <div class="swiper-slide slide" style="background:url(images/Slide/Fairytale2.jpg) no-repeat">
+         </div>
+         <div class="swiper-slide slide" style="background:url(images/Slide/Fairytale3.jpg) no-repeat">
+         </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+   </div>
+</div>
+</section>
+
+<!-- about section starts  -->
+
+
+<!-- about section ends -->
+
+<!-- reviews section starts  -->
+
+
+<section class="services">
+  <h1 class="heading-title" style="color: tomato;">30 FONT AWESOME ICONS</h1>
+
+ <div class="box-container">
+  <div class="box">
+    <a href="#"><i class="fas fa-phone" style="color: white; font-size: 40px;"></i></a>
+    <h3>Phone</a></h3>
+  </div>
+  <div class="box">
+    <a href="#"><i class="fas fa-envelope" style="color: white; font-size: 40px;"></i></a>
+    <h3>Email</a></h3>
+  </div>
+  <div class="box">
+    <a href="#"><i class="fas fa-globe" style="color: white; font-size: 40px;"></i></a>
+    <h3>Website</a></h3>
+  </div>
+  <div class="box">
+    <a href="#"><i class="fas fa-map-marker" style="color: white; font-size: 40px;"></i></a>
+    <h3>Location</a></h3>
+  </div>
+  <div class="box">
+    <a href="#"><i class="fas fa-info-circle" style="color: white; font-size: 40px;"></i></a>
+    <h3>Info</a></h3>
+  </div>
+</div>
+</section>
+
+<section class="services">
+   <div class="box-container">
+      <div class="box">
+         <a href="#"><i class="fas fa-home" style="color: white; font-size: 40px;"></i></a>
+         <h3>Home</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-user" style="color: white; font-size: 40px;"></i></a>
+         <h3>User</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-cog" style="color: white; font-size: 40px;"></i></a>
+         <h3>Settings</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-calendar" style="color: white; font-size: 40px;"></i></a>
+         <h3>Calendar</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-search" style="color: white; font-size: 40px;"></i></a>
+         <h3>Search</a></h3>
+      </div>
+   </div>
+</section>
+
+
+<section class="services">
+   <div class="box-container">
+      <div class="box">
+         <a href="#"><i class="fas fa-folder" style="color: white; font-size: 40px;"></i></a>
+         <h3>Folder</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-globe" style="color: white; font-size: 40px;"></i></a>
+         <h3>Globe</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-camera" style="color: white; font-size: 40px;"></i></a>
+         <h3>Camera</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-music" style="color: white; font-size: 40px;"></i></a>
+         <h3>Music</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-briefcase" style="color: white; font-size: 40px;"></i></a>
+         <h3>Briefcase</a></h3>
+      </div>
+   </div>
+</section>
+
+
+<section class="services">
+   <div class="box-container">
+      <div class="box">
+         <a href="#"><i class="fas fa-heart" style="color: white; font-size: 40px;"></i></a>
+         <h3>Heart</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-star" style="color: white; font-size: 40px;"></i></a>
+         <h3>Star</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-cloud" style="color: white; font-size: 40px;"></i></a>
+         <h3>Cloud</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-comment" style="color: white; font-size: 40px;"></i></a>
+         <h3>Comment</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-thumbs-up" style="color: white; font-size: 40px;"></i></a>
+         <h3>Thumbs Up</a></h3>
+      </div>
+   </div>
+</section>
+
+
+<section class="services">
+   <div class="box-container">
+      <div class="box">
+         <a href="#"><i class="fas fa-shopping-cart" style="color: white; font-size: 40px;"></i></a>
+         <h3>Shopping Cart</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-map-marker" style="color: white; font-size: 40px;"></i></a>
+         <h3>Map Marker</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-graduation-cap" style="color: white; font-size: 40px;"></i></a>
+         <h3>Graduation Cap</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-bell" style="color: white; font-size: 40px;"></i></a>
+         <h3>Bell</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-box" style="color: white; font-size: 40px;"></i></a>
+         <h3>Box</a></h3>
+      </div>
+   </div>
+</section>
+
+
+<section class="services">
+   <div class="box-container">
+      <div class="box">
+         <a href="#"><i class="fas fa-cutlery" style="color: white; font-size: 40px;"></i></a>
+         <h3>Dining</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-truck" style="color: white; font-size: 40px;"></i></a>
+         <h3>Delivery</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-film" style="color: white; font-size: 40px;"></i></a>
+         <h3>Entertainment</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-check-circle" style="color: white; font-size: 40px;"></i></a>
+         <h3>Quality</a></h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="fas fa-rocket" style="color: white; font-size: 40px;"></i></a>
+         <h3>Speed</a></h3>
+      </div>
+   </div>
+</section>
+
+
+<section class="home-offer home-packages">
+    <div class="content">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+         <!-- Indicators -->
+         <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <!-- Add more indicators for additional images -->
+         </ol>
+         
+         <!-- Wrapper for slides -->
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img src="images/Content/Fairytale1.jpg" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+               <img src="images/Content/Fairytale2.jpg" alt="Image 2">
+            </div>
+              <div class="carousel-item">
+               <img src="images/Content/Fairytale3.jpg" alt="Image 3">
+            </div>
+             <div class="carousel-item">
+               <img src="images/Content/Fairytale4.jpg" alt="Image 4">
+            </div>
+             <div class="carousel-item">
+               <img src="images/Content/Fairytale5.jpg" alt="Image 5">
+            </div>
+             <div class="carousel-item">
+               <img src="images/Content/Fairytale6.jpg" alt="Image 6">
+            </div>
+         </div>
+         
+         <!-- Left and right controls -->
+         <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+         </a>
+         <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+         </a>
+      </div>
+   </div>
+   <div class="content">
+     <h1>"The Guild's Grand Gala: A Night of Revelry and Surprises"</h1>
+<p>Episode Summary:
+In the bustling city of Magnolia, Fairy Tail guild members are gearing up for one of the most anticipated events of the year—the Guild's Grand Gala. This extravagant affair is a chance for wizards to relax, celebrate their victories, and let loose in a night of festivity.</p>
+
+<p>As the sun sets and the guild hall transforms into a dazzling spectacle, our favorite Fairy Tail wizards don their finest attire. Natsu, Lucy, Erza, Gray, and Happy are all dressed to impress, each with their own unique style and flair. The guild hall is decorated with magical lights, and the scent of delicious food wafts through the air.</p>
+
+<p>The Grand Gala is not only an opportunity for celebration but also a time for surprising announcements and revelations. Master Makarov takes the stage and addresses the guild members, sharing important news about the guild's future. Excitement and curiosity ripple through the crowd as Fairy Tail's destiny hangs in the balance.</p>
+
+<p>As the night goes on, friendships are strengthened, secrets are revealed, and Fairy Tail's bond grows even tighter. The Guild's Grand Gala proves to be an unforgettable evening filled with laughter, camaraderie, and unexpected twists that will leave fans eagerly awaiting the next chapter in the Fairy Tail saga.</p>
+   </div>
+</section>
+
+<section class="partner">
+   <h1 class="heading-title" style="font-size: 30px; color: tomato;">LINKS</h1>
+
+   <div class="box-container">
+      <div class="partner">
+         <a href="https://one-piece.com">
+  <img src="images/Logo/Onepiece.jpg" alt="" width="300" height="130"></a>
+      </div>
+      <div class="partner">
+          <a href="https://www.viz.com/hunter-x-hunter">
+         <img src="images/Logo/HunterXHunter.jpg" alt="" width="300" height="80"></a>
+      </div>
+      <div class="partner">
+       <a href="https://fairytailgame.com">
+         <img src="images/Logo/Fairytale1.jpg" alt="" width="300" height="100"></a>
+      </div>
+   <div class="partner">
+       <a href="https://github.com/johnarniemariano/ITE233">
+         <img src="images/Logo/GitHub.jpg" alt=""width="300" height="100"></a>
+      </div>
+   </div>
+</section>
+
+
+<section class="footer">
+   <div class="box-container">
+      <div class="box">
+        <h3>Group By</h3>
+         <a href="#"> <i class="fas fa-user" style="color: lightcyan;"></i>John Arnie A. Mariano</a>
+         <a href="#"> <i class="fas fa-user" style="color: lightcyan;"></i>Janrey Corpuz</a>
+         <a href="#"> <i class="fas fa-user" style="color: lightcyan;"></i>John Fragata</a>
+         <a href="#"> <i class="fas fa-user" style="color: lightcyan;"></i>Dan Myron Rodriguez</a>
+      </div>
+       <div class="box">
+        <h3>Au Email</h3>
+         <a href="#"> <i class="fas fa-envelope" style="color: peachpuff;"></i>Joan.mariano.au@phinmaed.com</a>
+         <a href="#"> <i class="fas fa-envelope" style="color: peachpuff;"></i>Java.corpuz.au@phinmaed.com</a>
+         <a href="#"> <i class="fas fa-envelope" style="color: peachpuff;"></i>Jobu.fragata.au@phinmaed.com</a>
+         <a href="#"> <i class="fas fa-envelope" style="color: peachpuff;"></i>dabi.rodriguez.au@phinmaed.com</a>
+      </div>
+      <div class="box">
+         <h3>follow us</h3>
+         <a href="https://www.facebook.com/"> <i class="fab fa-facebook-f" style="color: Blue;"></i> Facebook </a>
+         <a href="https://www.instagram.com/"> <i class="fab fa-instagram" style="color: Red;"></i> Instagram </a>
+         <a href="https://twitter.com"> <i class="fab fa-twitter" style="color: skyblue;"></i> Twitter </a>
+         <a href="https://discordapp.com"> <i class="fab fa-github" style="color: skyblue;"></i> Discord </a>
+      </div>
+   </div>
+   <div class="credit"> Owner By <span>JJJD</span> | all rights reserved! </div>
+</section>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

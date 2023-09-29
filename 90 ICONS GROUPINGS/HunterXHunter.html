@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>30 BOOTSRAP ICONS</title>
+   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+         
+</head>
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+   <style>
+      /* Define styles for dark mode */
+      .dark-mode {
+         background-color: #222;
+         color: #fff;
+      }
+      /* Add more dark mode styles as needed */
+   </style>
+</head>
+
+
+   <!-- Dark mode toggle button -->
+<button id="dark-mode-toggle" class="fas fa-moon" style="font-size: 15px;"></button>
+
+   <script>
+      // Function to toggle dark mode
+      function toggleDarkMode() {
+         const currentMode = document.body.classList.contains('dark-mode');
+         const newMode = !currentMode;
+         document.body.classList.toggle('dark-mode', newMode);
+
+          const partnersHeading = document.getElementById('partners-heading');
+    partnersHeading.style.color = newMode ? 'white' : 'black';
+
+         // Send the dark mode preference as a query parameter to toggle in URL
+         const newUrl = window.location.href.replace(
+            /(\?|&)darkmode=(true|false)/,
+            `?darkmode=${newMode}`
+         );
+         window.history.replaceState({}, '', newUrl);
+
+         // Store the preference in a cookie
+         document.cookie = `darkMode=${newMode}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/`;
+      }
+
+      // Event listener for the dark mode toggle button
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      darkModeToggle.addEventListener('click', toggleDarkMode);
+
+      // Check the user's dark mode preference from local storage
+      const userPreference = localStorage.getItem('darkMode');
+      if (userPreference === 'true') {
+         toggleDarkMode();
+      }
+   function updatePST() {
+    const pstElement = document.getElementById('pstTime');
+    const now = new Date().toLocaleString('en-US', { timeZone: 'Asia/Manila', hour12: true, hour: 'numeric', minute: 'numeric' });
+    pstElement.textContent = `Philippine Time: ${now}`;
+}
+
+setInterval(updatePST, 1000);
+</script>
+   <button type="button" class="scroll-top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+<!-- header section starts  -->
+
+<section class="header">
+   <a href="#" class="logo"><img src="images/Logo/HunterXHunter.jpg" width="220" height="120"></a>
+    <nav class="navbar">
+      <a href="Onepiece.html">Onepiece</a>
+      <a href="HunterXHunter.html">HunterXHunter</a>
+      <a href="Fairytale.html">Fairytale</a>
+     
+   </nav>
+  <div class="time-display">
+        <span class="philippine-time" id="pstTime">Loading...</span>
+    </div>
+
+   <div id="menu-btn" class="fas fa-bars"></div>
+
+</section>
+
+<!-- header section ends -->
+
+<section class="home">
+   <div class="swiper home-slider">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide slide" style="background:url(images/Slide/HunterXHunter1.jpg) no-repeat">
+         </div>
+        <div class="swiper-slide slide" style="background:url(images/Slide/HunterXHunter2.jpg) no-repeat">
+         </div>
+         <div class="swiper-slide slide" style="background:url(images/Slide/HunterXHunter3.jpg) no-repeat">
+         </div>
+         <div class="swiper-slide slide" style="background:url(images/Slide/HunterXHunter4.jpg) no-repeat">
+         </div>
+         <div class="swiper-slide slide" style="background:url(images/Slide/HunterXHunter5.jpg) no-repeat">
+         </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+   </div>
+</div>
+</section>
+<!-- about section starts  -->
+
+
+<!-- about section ends -->
+
+<!-- reviews section starts  -->
+
+<section class="services">
+  <h1 class="heading-title" style="color: tomato;">30 BOOTSTRAP ICONS</h1>
+
+   <div class="box-container">
+       <div class="box">
+      <a href="#"><i class="bi bi-telephone-fill text-white" style="font-size: 40px;"></i></a>
+      <h3>Phone</h3>
+    </div>
+    <div class="box">
+      <a href="#"><i class="bi bi-envelope-fill text-white" style="font-size: 40px;"></i></a>
+      <h3>Email</h3>
+    </div>
+    <div class="box">
+      <a href="#"><i class="bi bi-globe text-white" style="font-size: 40px;"></i></a>
+      <h3>Website</h3>
+    </div>
+    <div class="box">
+      <a href="#"><i class="bi bi-geo-alt-fill text-white" style="font-size: 40px;"></i></a>
+      <h3>Location</h3>
+    </div>
+    <div class="box">
+      <a href="#"><i class="bi bi-info-circle-fill text-white" style="font-size: 40px;"></i></a>
+      <h3>Info</h3>
+    </div>
+  </section>
+
+<section class="services">
+    <div class="box-container">
+        <div class="box">
+            <a href="#"><i class="bi bi-house-door-fill text-white" style="font-size: 40px;"></i></a>
+            <h3>Home</h3>
+        </div>
+        <div class="box">
+            <a href="#"><i class="bi bi-person-fill text-white" style="font-size: 40px;"></i></a>
+            <h3>User</h3>
+        </div>
+        <div class="box">
+            <a href="#"><i class="bi bi-gear-fill text-white" style="font-size: 40px;"></i></a>
+            <h3>Settings</h3>
+        </div>
+        <div class="box">
+            <a href="#"><i class="bi bi-calendar-fill text-white" style="font-size: 40px;"></i></a>
+            <h3>Calendar</h3>
+        </div>
+        <div class="box">
+            <a href="#"><i class="bi bi-search text-white" style="font-size: 40px;"></i></a>
+            <h3>Search</h3>
+        </div>
+    </div>
+</section>
+
+<section class="services">
+    <div class="box-container">
+        <div class="box">
+            <a href="#"><i class="bi bi-folder-fill text-white" style="font-size: 40px;"></i></a>
+            <h3>Folder</h3>
+        </div>
+        <div class="box">
+            <a href="#"><i class="bi bi-globe text-white" style="font-size: 40px;"></i></a>
+            <h3>Globe</h3>
+        </div>
+        <div class="box">
+            <a href="#"><i class="bi bi-camera-fill text-white" style="font-size: 40px;"></i></a>
+            <h3>Camera</h3>
+        </div>
+        <div class="box">
+            <a href="#"><i class="bi bi-music-note text-white" style="font-size: 40px;"></i></a>
+            <h3>Music</h3>
+        </div>
+        <div class="box">
+            <a href="#"><i class="bi bi-briefcase-fill text-white" style="font-size: 40px;"></i></a>
+            <h3>Briefcase</h3>
+        </div>
+    </div>
+</section>
+
+<section class="services">
+   <div class="box-container">
+      <div class="box">
+         <a href="#"><i class="bi bi-heart-fill text-white" style="font-size: 40px;"></i></a>
+         <h3>Heart</h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="bi bi-star-fill text-white" style="font-size: 40px;"></i></a>
+         <h3>Star</h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="bi bi-cloud-fill text-white" style="font-size: 40px;"></i></a>
+         <h3>Cloud</h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="bi bi-chat-dots-fill text-white" style="font-size: 40px;"></i></a>
+         <h3>Chat Dots</h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="bi bi-x-octagon-fill text-white" style="font-size: 40px;"></i></a>
+         <h3>Octagon</h3>
+      </div>
+   </div>
+</section>
+
+
+<section class="services">
+   <div class="box-container">
+      <div class="box">
+         <a href="#"><i class="bi bi-cart-fill text-white" style="font-size: 40px;"></i></a>
+         <h3>Shopping Cart</h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="bi bi-geo-alt-fill text-white" style="font-size: 40px;"></i></a>
+         <h3>Map Marker</h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="bi bi-wrench-adjustable-circle-fill text-white" style="font-size: 40px;"></i></a>
+         <h3>Wrench Adjustable Circle</h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="bi bi-bell-fill text-white" style="font-size: 40px;"></i></a>
+         <h3>Bell</h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="bi bi-box-fill text-white" style="font-size: 40px;"></i></a>
+         <h3>Box</h3>
+      </div>
+   </div>
+</section>
+
+
+<section class="services">
+   <div class="box-container">
+      <div class="box">
+         <a href="#"><i class="bi bi-window-x text-white" style="font-size: 40px;"></i></a>
+         <h3>Window X</h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="bi bi-window-sidebar text-white" style="font-size: 40px;"></i></a>
+         <h3>Window Sidebar</h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="bi bi-wind text-white" style="font-size: 40px;"></i></a>
+         <h3>Wind</h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="bi bi-check-circle-fill text-white" style="font-size: 40px;"></i></a>
+         <h3>Quality</h3>
+      </div>
+      <div class="box">
+         <a href="#"><i class="bi bi-rocket-fill text-white" style="font-size: 40px;"></i></a>
+         <h3>Speed</h3>
+      </div>
+   </div>
+</section>
+
+
+<section class="home-offer home-packages">
+    <div class="content">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+         <!-- Indicators -->
+         <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <!-- Add more indicators for additional images -->
+         </ol>
+         
+         <!-- Wrapper for slides -->
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img src="images/Content/HunterXHunter1.jpg" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+               <img src="images/Content/HunterXHunter2.jpg" alt="Image 2">
+            </div>
+              <div class="carousel-item">
+               <img src="images/Content/HunterXHunter3.jpg" alt="Image 3">
+            </div>
+             <div class="carousel-item">
+               <img src="images/Content/HunterXHunter4.jpg" alt="Image 4">
+            </div>
+             <div class="carousel-item">
+               <img src="images/Content/HunterXHunter5.jpg" alt="Image 5">
+            </div>
+             <div class="carousel-item">
+               <img src="images/Content/HunterXHunter6.jpg" alt="Image 6">
+            </div>
+             <div class="carousel-item">
+               <img src="images/Content/HunterXHunter7.jpg" alt="Image 7">
+            </div>
+         </div>
+         
+         <!-- Left and right controls -->
+         <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+         </a>
+         <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+         </a>
+      </div>
+   </div>
+   <div class="content">
+       <h1>"Gon and Killua's Unlikely Alliance"</h1>
+        <p>Episode Summary:
+In the latest episode of Hunter x Hunter, our young heroes, Gon and Killua, find themselves faced with a formidable challenge. The duo, along with their friends Leorio and Kurapika, are deep within the treacherous Heaven's Arena, where fighters from all over the world come to test their strength.</p>
+         <p>Gon and Killua have both decided to participate in the martial arts tournaments held within the arena, each with their own motivations. Gon seeks to hone his Nen abilities and gain valuable combat experience to prepare for the hunt for his father, Ging Freecss. Meanwhile, Killua is on a personal journey to discover his own strength and identity outside of his family's assassin business.</p>
+
+<p>However, as they progress through the ranks, they face increasingly skilled and ruthless opponents. It becomes evident that their current abilities are not enough to secure victory. In a twist of fate, Gon and Killua form an unexpected alliance with a mysterious Nen master who goes by the name "Wing."</p>
+
+<p>As the days pass and the tournaments continue, Gon and Killua's determination and newfound Nen skills begin to shine. Their rivals underestimate them at their own peril, and a sense of anticipation builds among the spectators as they watch the duo's meteoric rise within the Heaven's Arena.</p>
+        </div>
+   </div>
+</section>
+
+<section class="partner">
+   <h1 class="heading-title" style="font-size: 30px; color: tomato;">LINKS</h1>
+
+   <div class="box-container">
+      <div class="partner">
+         <a href="https://one-piece.com">
+  <img src="images/Logo/Onepiece.jpg" alt="" width="300" height="130"></a>
+      </div>
+      <div class="partner">
+          <a href="https://www.viz.com/hunter-x-hunter">
+         <img src="images/Logo/HunterXHunter.jpg" alt="" width="300" height="80"></a>
+      </div>
+      <div class="partner">
+       <a href="https://fairytailgame.com">
+         <img src="images/Logo/Fairytale1.jpg" alt="" width="300" height="100"></a>
+      </div>
+   <div class="partner">
+       <a href="https://github.com/johnarniemariano/ITE233">
+         <img src="images/Logo/GitHub.jpg" alt=""width="300" height="100"></a>
+      </div>
+   </div>
+</section>
+
+<section class="footer">
+   <div class="box-container">
+      <div class="box">
+         <h3>Group By</h3>
+         <a href="#"> <i class="fas fa-user" style="color: lightcyan;"></i>John Arnie A. Mariano</a>
+         <a href="#"> <i class="fas fa-user" style="color: lightcyan;"></i>Janrey Corpuz</a>
+         <a href="#"> <i class="fas fa-user" style="color: lightcyan;"></i>John Fragata</a>
+         <a href="#"> <i class="fas fa-user" style="color: lightcyan;"></i>Dan Myron Rodriguez</a>
+      </div>
+       <div class="box">
+        <h3>Au Email</h3>
+         <a href="#"> <i class="fas fa-envelope" style="color: peachpuff;"></i>Joan.mariano.au@phinmaed.com</a>
+         <a href="#"> <i class="fas fa-envelope" style="color: peachpuff;"></i>Java.corpuz.au@phinmaed.com</a>
+         <a href="#"> <i class="fas fa-envelope" style="color: peachpuff;"></i>Jobu.fragata.au@phinmaed.com</a>
+         <a href="#"> <i class="fas fa-envelope" style="color: peachpuff;"></i>dabi.rodriguez.au@phinmaed.com</a>
+      </div>
+      <div class="box">
+         <h3>follow us</h3>
+         <a href="https://www.facebook.com/"> <i class="fab fa-facebook-f" style="color: Blue;"></i> Facebook </a>
+         <a href="https://www.instagram.com/"> <i class="fab fa-instagram" style="color: Red;"></i> Instagram </a>
+         <a href="https://twitter.com"> <i class="fab fa-twitter" style="color: skyblue;"></i> Twitter </a>
+         <a href="https://discordapp.com"> <i class="fab fa-github" style="color: skyblue;"></i> Discord </a>
+      </div>
+   </div>
+   <div class="credit"> Owner By <span>JJJD</span> | all rights reserved! </div>
+</section>
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
