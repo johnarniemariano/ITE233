@@ -19,7 +19,83 @@
          background-color: #222;
          color: #fff;
       }
-      /* Add more dark mode styles as needed */
+      .onepiece {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    width: 650px;
+    height: 600px;
+    font-family: "Figtree", sans-serif;
+    transition: all 400ms;
+}
+
+.one {
+    position: relative;
+    background: var(--img) center center;
+    background-size: cover;
+    transition: all 400ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one::after {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 20px;
+    background: #000;
+    color: #fff;
+    padding: 10px 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transform: translateY(60px);
+    opacity: 0;
+    transition: all 400ms;
+}
+
+.onepiece:hover .one {
+    filter: grayscale(100%) opacity(24%);
+}
+
+.one:hover::after {
+    transform: translateY(0);
+    opacity: 1;
+    transition-delay: 400ms;
+}
+
+.onepiece .one:hover {
+    filter: grayscale(0%) opacity(100%);
+}
+
+.onepiece:has(.box-1:hover){
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+}
+
+.onepiece:has(.box-2:hover){
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+}
+
+
+.onepiece:has(.box-3:hover){
+    grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+}
+
+.onepiece:has(.box-4:hover){
+    grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
+}
+
+.onepiece:has(.box-5:hover){
+    grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+}
+
+.one:nth-child(odd){
+    transform: translateY(-16px);
+}
+
+.one:nth-child(even){
+    transform: translateY(16px);
+}
    </style>
 </head>
 
@@ -105,13 +181,28 @@ setInterval(updatePST, 1000);
 </div>
 </section>
 
-<!-- about section starts  -->
+<section class="home-offer home-packages">
+   <div class="content">
+     <div class="onepiece">
+        <div class="one box-1" style="--img:url(images/ALL/Luffy.jpg);" data-text="Luffy"></div>
+        <div class="one box-2" style="--img:url(images/ALL/Ace.jpg);" data-text="Ace"></div>
+        <div class="one box-3" style="--img:url(images/ALL/Sanji.jpg);" data-text="Sanji"></div>
+        <div class="one box-4" style="--img:url(images/ALL/Zoro.jpg);" data-text="Zoro"></div>
+        <div class="one box-5" style="--img:url(images/ALL/Shanks.jpg);" data-text="Shanks"></div>
+    </div>  
+    </div> 
+       <div class="content">
+     <h1>  "The Epic Journey of One Piece: A Treasure Trove of Adventure"</h1>
+       <p>Introduction
 
+One Piece, the acclaimed manga and anime series created by Eiichiro Oda, has captured the hearts of fans around the world for over two decades. With its intricate world-building, diverse cast of characters, and epic storyline, One Piece is a masterpiece of the shonen genre. In this article, we'll delve into the world of One Piece, exploring its captivating plot, memorable characters, and the enduring legacy it has left in the world of anime and manga.</p>
 
-<!-- about section ends -->
+<p>The Grand Adventure
 
-<!-- reviews section starts  -->
-
+At the heart of One Piece is a grand adventure that spans the vast and mysterious seas of the world. The story follows Monkey D. Luffy, a young and ambitious pirate with the ability to stretch his body like rubber after consuming the mystical Gum-Gum Fruit. Luffy dreams of becoming the Pirate King and finding the ultimate treasure, the One Piece, which is said to be located at the end of the treacherous Grand Line. To achieve this dream, he sets out on a journey to assemble a crew of loyal and powerful companions known as the Straw Hat Pirates.</p>
+<p>Throughout their journey, the Straw Hat Pirates encounter a plethora of unique and colorful islands, each with its own set of challenges, enemies, and mysteries. From battling powerful pirate crews and government agencies to uncovering ancient civilizations and legendary artifacts, the crew's adventures are nothing short of epic.</p>
+    </div>
+</section>
 
 
 <section class="services">
@@ -341,7 +432,7 @@ In the latest episode of One Piece, our fearless pirate captain Monkey D. Luffy 
       </div>
       <div class="partner">
           <a href="https://www.viz.com/hunter-x-hunter">
-         <img src="images/Logo/HunterXHunter.jpg" alt="" width="300" height="80"></a>
+         <img src="images/Logo/HunterXHunter.jpg" alt="" width="300" height="100"></a>
       </div>
       <div class="partner">
        <a href="https://fairytailgame.com">
